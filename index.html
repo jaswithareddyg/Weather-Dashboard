@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-City Weather Dashboard - Real-time Polling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Multi-City Weather Dashboard</h1>
+        <div class="sync-status">
+          <div class="sync-indicator" id="syncIndicator"></div>
+          <div class="sync-text" id="syncText">Live • Updates every 30s</div>
+        </div>
+      </header>
+
+      <div class="controls-panel">
+        <button class="control-btn" onclick="togglePolling()">
+          <span id="pollToggle">⏸ Pause Updates</span>
+        </button>
+        <button class="control-btn" onclick="refreshAll()">
+          🔄 Refresh All
+        </button>
+        <button class="control-btn" onclick="addCity()">➕ Add City</button>
+        <button class="control-btn" onclick="changeUnits()">
+          <span id="unitToggle">°C → °F</span>
+        </button>
+      </div>
+
+      <div class="grid" id="weatherGrid">
+        <div class="loading">
+          <div class="spinner"></div>
+          <div>Loading weather data...</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
