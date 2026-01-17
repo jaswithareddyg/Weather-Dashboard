@@ -135,8 +135,10 @@ function updateWeatherCard(cityName) {
   setTimeout(() => card.classList.remove("updating"), 300);
 
   const cityObj = cities.find((c) => c.name === cityName);
-  
-    const displayFlag = cityObj?.country ? countryCodetoFlag(cityObj.country) : "";
+
+  const displayFlag = cityObj?.country
+    ? countryCodetoFlag(cityObj.country)
+    : "";
 
   const weatherDesc = getWeatherDescription(data.weather_code);
   const icon = getWeatherIcon(data.weather_code);

@@ -120,6 +120,7 @@ h1 {
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  animation: slideIn 0.5s ease-out;
 }
 
 .weather-card::before {
@@ -254,7 +255,7 @@ h1 {
   border: none;
   color: var(--accent-red);
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   line-height: 1;
   padding: 0;
   transition:
@@ -263,14 +264,14 @@ h1 {
 }
 
 .remove-city-btn:hover {
-  opacity: 0.8;
+  opacity: 1.2;
   transform: scale(1.1);
 }
 
 .loading {
   padding: 3rem;
   text-align: center;
-  color: var(--text-secondary);
+  color: var(--text-dim);
 }
 
 .spinner {
@@ -298,10 +299,6 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.weather-card {
-  animation: slideIn 0.5s ease-out;
 }
 
 .error-card {
