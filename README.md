@@ -53,3 +53,24 @@ https://geocoding-api.open-meteo.com
  - Automatically retries on the next polling cycle
 
  - UI remains responsive
+
+## ⚠️ Important Caveat: City Names & Historical Place Names
+
+The dashboard relies on the **Open-Meteo Geocoding API** to resolve city names into geographic coordinates.
+
+In some cases, the geocoding service may return **historical, alternative, or less commonly used place names** instead of the modern or expected name.
+
+### Example
+
+- You enter: `Singapore`
+- The dashboard may display: `Temasek`
+
+This happens because:
+- Open-Meteo prioritizes certain historical or regional names in its geocoding results.
+- The app currently uses the **first result returned by the API** without additional name normalization.
+
+### What This Means
+
+- ✅ Weather data is still accurate (coordinates are correct)
+- ⚠️ Displayed city names may occasionally differ from what you typed
+- 🌍 This behavior depends entirely on the geocoding data source
