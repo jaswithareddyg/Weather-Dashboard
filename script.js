@@ -149,7 +149,6 @@ function updateWeatherCard(cityName) {
                     <div class="city-name">
                         ${cityName} ${displayFlag}
                     </div>
-                    <div class="update-badge">Just now</div>
                     <button class="remove-city-btn" onclick="removeCity('${cityName}')">
                         ✖
                     </button>
